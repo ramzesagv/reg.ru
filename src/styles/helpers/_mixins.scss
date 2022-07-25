@@ -1,0 +1,86 @@
+@import "variables";
+
+// Fonts
+@mixin use-font (
+  $font-weight: $font-weight-regular,
+  $font-size: $font-size-large-title,
+  $line-height: 1.4em,
+) {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin font-large-title () {
+  @include use-font(
+    $font-weight-bold,
+    $font-size-large-title,
+    $line-height-large-title,
+  )
+}
+
+@mixin font-medium-title () {
+  @include use-font(
+    $font-weight-bold,
+    $font-size-medium-title,
+    $line-height-medium-title,
+  )
+}
+
+@mixin font-small-title () {
+  @include use-font(
+    $font-weight-regular,
+    $font-size-small-title,
+    $line-height-small-title,
+  )
+}
+
+@mixin font-small-mobile-title () {
+  @include use-font(
+    $font-weight-bold,
+    $font-size-small-title,
+    $line-height-small-title,
+  )
+}
+
+@mixin font-mini-title () {
+  @include use-font(
+    $font-weight-medium,
+    $font-size-mini-title,
+    $line-height-mini-title,
+  )
+}
+
+@mixin font-large-text () {
+  @include use-font(
+    $font-weight-regular,
+    $font-size-large-text,
+    $line-height-large-text,
+  )
+}
+
+@mixin font-medium-text () {
+  @include use-font(
+    $font-weight-regular,
+    $font-size-medium-text,
+    $line-height-medium-text,
+  )
+}
+
+@mixin font-small-text () {
+  @include use-font(
+    $font-weight-regular,
+    $font-size-small-text,
+    $line-height-small-text,
+  )
+}
+
+@mixin font-mini-text () {
+  @include use-font(
+    $font-weight-regular,
+    $font-size-mini-text,
+    $line-height-mini-text,
+  )
+}

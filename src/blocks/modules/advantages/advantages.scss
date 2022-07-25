@@ -1,0 +1,91 @@
+@import "../../../styles/helpers/variables";
+@import "../../../styles/helpers/mixins";
+
+.advantages {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+
+        @media (max-width: 767.98px) {
+            display: block;
+        }
+    }
+
+    &__item {
+        display: flex;
+        max-width: 400px;
+
+        @media (max-width: 767.98px) {
+            max-width: 100%;
+            margin-bottom: 25px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            align-items: center;
+        }
+
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 90px;
+            min-height: 90px;
+            height: 90px;
+            width: 90px;
+            border-radius: 50%;
+            background: $color-yellow;
+            margin-right: 37px;
+
+            @media (max-width: 575.98px) {
+                height: 50px;
+                width: 50px;
+                min-width: 50px;
+                min-height: 50px;
+            }
+
+            &-img {
+                width: 64px;
+                height: 64px;
+
+                @media (max-width: 575.98px) {
+                    width: 35px;
+                    height: 35px;
+                }
+
+                &_width {
+                    height: 75px;
+
+                    @media (max-width: 575.98px) {
+                        height: 42px;
+                    }
+                }
+            }
+        }
+
+        &-info {
+            @include font-large-text;
+
+            @media (max-width: 575.98px) {
+                @include font-small-text;
+            }
+
+            &-title {
+                margin-bottom: 10px;
+                color: $color-heading;
+
+                @media (max-width: 575.98px) {
+                    margin-bottom: 5px;
+                }
+            }
+
+            &-desc {
+                color: $color-text-additional;
+            }
+        }
+    }
+}

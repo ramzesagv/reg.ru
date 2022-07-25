@@ -1,0 +1,30 @@
+@import "../../../styles/helpers/variables";
+@import "../../../styles/helpers/mixins";
+
+.footer {
+    color: $color-white;
+    text-align: center;
+
+    &__title {
+        padding: 23px 0;
+        background: $color-main;
+
+        @media (max-width: 575.98px) {
+            font-size: $font-size-medium-text;
+            padding: 23px 15px;
+        }
+    }
+
+    &__copyright {
+        @include font-medium-text;
+
+        background: $color-text-additional-1;
+        padding: 27px 0;
+
+        @media (max-width: 575.98px) {
+            @include font-mini-text;
+
+            padding: 27px 15px;
+        }
+    }
+}

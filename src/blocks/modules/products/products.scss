@@ -1,0 +1,108 @@
+@import "../../../styles/helpers/variables";
+@import "../../../styles/helpers/mixins";
+
+.products {
+    background: $color-main;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 242px;
+        gap: 66px;
+
+        @media (max-width: 991.98px) {
+            display: block;
+        }
+    }
+
+    &__card {
+        display: flex;
+        min-height: 242px;
+        width: 100%;
+        background: $color-white;
+        border-radius: 8px;
+
+        @media (max-width: 991.98px) {
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-banner {
+            width: 163px;
+
+            @media (max-width: 1199.98px) {
+                display: none;
+            }
+
+            &_size_small {
+                align-self: flex-end;
+                width: 107px;
+                height: 104px;
+            }
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            padding: 30px 14px;
+
+            @media (max-width: 575.98px) {
+                text-align: center;
+            }
+        }
+
+        &-title {
+            color: $color-text-main;
+            font-weight: $font-weight-medium;
+
+            @media (max-width: 575.98px) {
+                @include font-mini-title;
+            }
+        }
+
+        &-desc {
+            @include font-large-text;
+
+            color: $color-text-main;
+            margin-top: 5px;
+
+            @media (max-width: 575.98px) {
+                @include font-small-text;
+
+                margin-top: 16px;
+            }
+        }
+
+        &-button {
+            @include font-large-text;
+
+            color: $color-text-dark;
+            text-align: center;
+            padding: 12px 0;
+            border-radius: 8px;
+            border: 1px solid $color-black;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+            max-height: 55px;
+            transition: 0.2s;
+
+            @media (max-width: 575.98px) {
+                margin: 0 auto;
+                height: 45px;
+                padding: 0;
+            }
+
+            &:hover, &:active {
+                background: $color-button-additional;
+                border-color: $color-button-additional;
+                color: $color-white;
+            }
+        }
+    }
+}

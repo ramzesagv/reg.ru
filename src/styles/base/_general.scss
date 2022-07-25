@@ -1,0 +1,60 @@
+@import "../helpers/mixins";
+
+h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+section {
+    padding: 140px 0;
+
+    @media (max-width: 575.98px) {
+        padding: 50px 0;
+    }
+}
+
+h1 {
+    @include font-large-title;
+
+    @media (max-width: 767.98px) {
+        @include font-small-mobile-title;
+    }
+}
+
+h2 {
+    @include font-medium-title;
+
+    @media (max-width: 767.98px) {
+        @include font-mini-title;
+    }
+}
+
+h3 {
+    @include font-small-title;
+}
+
+.container {
+    padding: 0 15px;
+
+    @media (min-width: 575.98px) {
+        max-width: 540px;
+        margin: auto;
+        padding: 0;
+    }
+
+    @media (min-width: 767.98px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 991.98px) {
+        max-width: 960px;
+    }
+
+    @media (min-width: 1199.98px){
+        max-width: 1140px;
+    }
+}

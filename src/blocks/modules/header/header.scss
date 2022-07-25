@@ -1,0 +1,48 @@
+@import "../../../styles/helpers/variables";
+@import "../../../styles/helpers/mixins";
+
+.header {
+    background: $color-main;
+    min-height: 58px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    &__logo {
+        &_width {
+            width: 91px;
+
+            @media (max-width: 575.98px) {
+                width: 81px;
+            }
+        }
+    }
+
+    &__button {
+        @include font-medium-text;
+
+        color: $color-white;
+        border: 1px solid $color-white;
+        background: $color-button-main;
+        padding: 5px 8px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &-link {
+            color: $color-white;
+        }
+
+        @media (max-width: 575.98px) {
+            font-size: $font-size-mini-text;
+        }
+
+        &:hover, &:active {
+            background: $color-button-main-hover;
+        }
+    }
+}
